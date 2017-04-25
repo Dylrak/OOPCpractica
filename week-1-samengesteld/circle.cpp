@@ -1,6 +1,6 @@
 #include "circle.hpp"
 
-circle::print()
+void circle::print()
 {
 	w.clear();
 	int x = radius;

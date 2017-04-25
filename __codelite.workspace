@@ -18,7 +18,7 @@
       <Project Name="week-1-filledrect" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="week-1-samengesteld" Path="week-1-samengesteld/_codelite.project" Active="No"/>
+  <Project Name="week-1-samengesteld" Path="week-1-samengesteld/_codelite.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="week-1-samengesteld" ConfigName="Release"/>
