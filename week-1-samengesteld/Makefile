@@ -9,10 +9,10 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := window.cpp filled_rectangle.cpp circle.cpp train.cpp line.cpp
+SOURCES := window.cpp filled_rectangle.cpp circle.cpp train.cpp line.cpp wagon.cpp
 
 # header files in this project
-HEADERS := window.hpp filled_rectangle.hpp circle.hpp train.hpp line.hpp
+HEADERS := window.hpp filled_rectangle.hpp circle.hpp train.hpp line.hpp wagon.hpp
 
 # other places to look for files for this project
 SEARCH  := 

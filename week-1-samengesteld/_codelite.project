@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="week-1-samengesteld" InternalType="" Version="10.0.0">
+<CodeLite_Project Name="week-1-samengesteld" InternalType="">
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
@@ -32,15 +32,17 @@
     <File Name="main.cpp"/>
     <File Name="circle.cpp"/>
     <File Name="circle.hpp"/>
-    <File Name="makefile"/>
-    <File Name="train.cpp"/>
-    <File Name="train.hpp"/>
     <File Name="filled_rectangle.cpp"/>
     <File Name="filled_rectangle.hpp"/>
     <File Name="line.cpp"/>
     <File Name="line.hpp"/>
+    <File Name="train.cpp"/>
+    <File Name="train.hpp"/>
+    <File Name="wagon.cpp"/>
+    <File Name="wagon.hpp"/>
     <File Name="window.cpp"/>
     <File Name="window.hpp"/>
+    <File Name="makefile"/>
   </VirtualDirectory>
   <Settings Type="Dynamic Library">
     <GlobalSettings>
@@ -53,7 +55,7 @@
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-32 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g;-O0;-std=c++11" C_Options="-g;-O0;-Wall" Assembler="" Required="no" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+       <Compiler Options="-g;-O0;-std=c++11" C_Options="-g;-O0;-Wall" Assembler="" Required="no" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value=".;../Catch/include"/>
       </Compiler>
       <Linker Options="" Required="yes"/>
@@ -129,4 +131,4 @@
       </Completion>
     </Configuration>
   </Settings>
-</CodeLite_Project>
+</CodeLite_Project>   

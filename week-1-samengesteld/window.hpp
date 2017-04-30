@@ -18,6 +18,9 @@ public:
    window( int x_size, int y_size, int scale );
    void draw( int x, int y );
    void clear();
+   void clear_screen();
+   int screen_width();
+   int screen_height();
 };
 
 #endif // WINDOW_HPP

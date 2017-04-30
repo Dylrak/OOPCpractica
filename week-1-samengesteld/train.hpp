@@ -1,8 +1,8 @@
 #ifndef TRAIN_HPP
 #define TRAIN_HPP
 
-#include "circle.hpp"
-#include "window.hpp"
+#include "wagon.hpp"
+#include "line.hpp"
 
 class train {
 private:

@@ -114,8 +114,16 @@ void print_pixel( HDC hdc, int x, int y, int scale, int color ){
 
 void window::clear(){
    return;
-   for( int x = 0; x < 128; ++x )   {
-      for( int y = 0; y < 64; ++y ){
+   for( int x = 0; x < x_size; x++ )   {
+      for( int y = 0; y < y_size; y++ ){
+         print_pixel( hdc, x, y, scale, RGB( 0xFF, 0xFF, 0xFF ) );
+      }
+   }
+}
+
+void window::clear_screen(){
+	for( int x = 0; x < x_size; x++ )   {
+      for( int y = 0; y < y_size; y++ ){
          print_pixel( hdc, x, y, scale, RGB( 0xFF, 0xFF, 0xFF ) );
       }
    }
@@ -125,3 +133,10 @@ void window::draw( int x, int y ){
    print_pixel( hdc, x, y, scale, RGB( 0x00, 0x00, 0x00 ) );
 }
 
+
+int window::screen_width(){
+	return x_size;
+}
+int window::screen_height(){
+	return y_size;
+}
