@@ -1,6 +1,7 @@
 #ifndef RATIONAL_HPP
 #define RATIONAL_HPP
 
+#include <iomanip>
 /// @file
 
 /// \brief
@@ -52,7 +53,12 @@ public:
    /// if and only if the counter and denminator of both
    /// operands are equal.
    bool operator==( const rational & rhs ) const {
-      return ( counter == rhs.counter ) || ( denominator == rhs.denominator );
+	  //Copy variables without 
+	  rational left = * this;
+	  rational right = rhs;
+	  left.reduce();
+	  right.reduce();
+      return ( left.counter == right.counter ) || ( left.denominator == right.denominator );
    }
 
    /// \brief
@@ -62,12 +68,16 @@ public:
    /// [counter/denominator] where both values are printed as
    /// decimal values.
    friend std::ostream & operator<<( std::ostream & lhs, const rational & rhs ){
-      return lhs 
-         << "[" 
-         << rhs.counter 
-         << "/" 
-         << rhs.denominator
-         << "}";
+      return lhs
+		<< std::hex
+		<< "["
+		<< "0x"
+		<< std::setfill('0')
+		<< std::setw(2) << rhs.counter 
+		<< "/"
+		<< "0x"
+		<< std::setw(2) << rhs.denominator
+		<< "]";
    }   
    
    /// \brief   
@@ -83,10 +93,9 @@ public:
    /// \details
    /// This operator* multiplies a rational value by a rational value.
    rational operator*( const rational & rhs ) const {
-      return rational( 
-         denominator * rhs.denominator,
-         counter * rhs.counter
-      );
+	  rational res = rational( counter * rhs.counter, denominator * rhs.denominator );
+	  res.reduce();
+	  return res;
    }
    
    /// \brief   
@@ -99,12 +108,15 @@ public:
       reduce();
       return *this;
    }
-   
-   rational operator*=( const rational & rhs ){
-      counter = counter + rhs.counter;
-      denominator += rhs.denominator;
+   /// \brief   
+   /// Multiply a rational by another rational
+   /// \details
+   /// This operator*= multiplies a rational value by a rational value.
+   rational & operator*=( const rational & rhs ){
+      counter *= rhs.counter;
+      denominator *= rhs.denominator;
       reduce();
-      return rhs;
+      return *this;
    }
    
 };

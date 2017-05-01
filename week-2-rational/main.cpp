@@ -11,7 +11,7 @@ TEST_CASE( "constructor, two_parameters" ){
    rational v( 3, 4 );
    std::stringstream s;
    s << v;
-   REQUIRE( s.str() == "[3/4]" );   
+   REQUIRE( s.str() == "[0x03/0x04]" );   
 }
 
 TEST_CASE( "equality, equal" ){

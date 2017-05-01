@@ -6,13 +6,13 @@ using namespace std;
 //Edit this to get different wagons.
 const int amount_of_wagons = 4;
 
-//This program crashes after 10 or so seconds, so switch to the console screen and start spamming the numbers on your keyboard.
 int main(int argc, char **argv){
 	//Initiating window and train
 	window w( 128, 64, 2 );
 	train choochoo(w, amount_of_wagons);
 	choochoo.print();
 	//From here on out is threadblocking tomfoolery. It probably crashes because of getchar() so just edit the amount of wagons variable at the top.
+	//With the following uncommented this program crashes after 5 seconds, so switch to the console screen and start spamming a number on your keyboard.
 //	int input;
 //	cout << "Type the amount of wagons you want (1 through 9) or q to quit:\n";
 //	//By typing 0-9 into the program we can change the amount of wagons.
