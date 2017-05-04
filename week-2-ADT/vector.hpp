@@ -87,5 +87,4 @@ vector operator*( vector lhs, const int rhs ) {
 vector operator*(const int lhs, vector rhs ) {
 	return rhs *= lhs;
 }
-
 #endif // VECTOR_HPP
