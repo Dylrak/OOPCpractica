@@ -4,22 +4,25 @@ wall::wall( window & w, const vector & start, const vector & end, const int & up
 	rectangle(w, start, end),
 	filled ( filled ),
 	update_interval ( update_interval )
-	{
-	}
+	{}
 
 void wall::draw() {
-	rectangle::draw();
-	vector diff = rectangle::size - rectangle::location;
 	if (filled) {
-		vector identity (1, 1);
-		if (diff.x < diff.y) {
-			wall_width = diff.x;
-		} else {
-			wall_width = diff.y;
+		for (int y = location.y; y < end.y; y++) {
+			for (int x = location.x; x < end.x; x++) {
+				w.draw(vector(x, y));
+			}
 		}
-		for (int i = 1; i < wall_width; i++) {
-			rectangle filler (w, rectangle::location + identity * i, rectangle::size - identity * i);
-			filler.draw();
-		}
+	} else {
+		rectangle::draw();
+	}
+}
+
+void wall::update() {
+	if (update_count * 100 >= update_interval) {
+		filled = !filled;
+		update_count = 1;
+	} else {
+		update_count++;
 	}
 }

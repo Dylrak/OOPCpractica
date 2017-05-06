@@ -10,8 +10,9 @@
 #include "line.hpp"
 
 class rectangle : public drawable {
-private:
+protected:
    vector end;
+private:
    line left;
    line right;
    line top;

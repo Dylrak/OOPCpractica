@@ -8,7 +8,7 @@ int main(){
    wall top( w, vector(   0,  0 ), vector( 127,  4 ) );
    wall right( w, vector( 123,  0 ), vector( 127, 63 ) );
    wall bottom( w, vector(   0, 59 ), vector( 127, 63 ) );
-   wall left( w, vector(   0,  0 ), vector(   4, 63 )  );
+   wall left( w, vector(   0,  0 ), vector(   4, 63 ) );
    ball b( w, vector( 50, 20 ), 9, vector( 5, 2 ) );
    
    drawable * objects[] = { &b, &top, &left, &right, &bottom };
