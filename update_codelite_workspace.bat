@@ -1,2 +1,2 @@
-bmptk-make -f C:\Users\Dylan\Documents\OOPCpractica\Makefile.shared codelite_workspace
+bmptk-make -f H:\Documents\OOPCpractica\Makefile.shared codelite_workspace
 pause

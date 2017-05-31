@@ -30,6 +30,7 @@
   <Dependencies/>
   <VirtualDirectory Name="source">
     <File Name="main.cpp"/>
+    <File Name="pin_in_AND.hpp"/>
     <File Name="makefile"/>
   </VirtualDirectory>
   <Settings Type="Dynamic Library">

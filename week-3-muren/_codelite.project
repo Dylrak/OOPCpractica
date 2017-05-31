@@ -36,6 +36,8 @@
     <File Name="circle.hpp"/>
     <File Name="drawable.cpp"/>
     <File Name="drawable.hpp"/>
+    <File Name="filled_rectangle.cpp"/>
+    <File Name="filled_rectangle.hpp"/>
     <File Name="line.cpp"/>
     <File Name="line.hpp"/>
     <File Name="rectangle.cpp"/>
