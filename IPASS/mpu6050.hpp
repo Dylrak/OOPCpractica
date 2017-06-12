@@ -11,7 +11,7 @@ namespace hwlib {
 /// \details
 /// TODO
 /// Limitations:
-///		-the speed is fixed at ~500kHz, or somewhat lower
+///		-the speed is fixed at ~100kHz, or somewhat lower
 class mpu6050 : public i2c_bus {
 private:
 	pin_oc & scl, & sda;
